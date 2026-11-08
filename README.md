@@ -1,33 +1,215 @@
-# Orbit Terminal · web
+# Orbit Terminal | Official Website
 
-Web estática del **Orbit Terminal**, el ciberdeck de Miguel Rodríguez Saiz: una consola en cuña impresa en PLA+ que une un PC HP con Windows y una Raspberry Pi 4 con Orbit OS, con una pantalla MSI PRO MP161 E2U de 15,6".
+**Sitio web oficial de Orbit Terminal, una plataforma experimental de hardware, electrónica y software desarrollada por Miguel Rodríguez Saiz dentro de Ardu Solutions.**
 
-- Proyecto (hardware, CAD y software): https://github.com/Sopa-IA/Control-deck
-- La web es HTML + CSS + JS sin dependencias externas. Incluye la sección «La evolución del Orbit» (línea de tiempo con fotos reales del prototipo en construcción; para añadir etapas, copia un bloque `<li class="etapa">` en `index.html`) y una animación de montaje por scroll (variantes realista y toon) renderizada con Blender a partir del CAD del proyecto.
-- Las medidas y el diseño son provisionales: el CAD está en desarrollo.
-- La web lleva la etiqueta **PROTOTIPO EN DESARROLLO**. Las insignias de estado son siempre tres: «Terminado», «En pruebas» y «Pendiente» (con las variantes «Pendiente de confirmar» y «Pendiente de medir»). El bloque «Estado del proyecto» sale solo del README, `docs/ESTADO-Y-TRASPASO.md` y `docs/instalacion-pi.md` de Control-deck (PR #9) y de las fotos reales. En la «Ficha del proyecto», los datos sin medir no llevan cifra; para rellenarlos, cambia la insignia de su `<dd>` en `index.html`. El hueco «Demo de Orbit OS» lleva de momento una **animación ilustrativa hecha en Blender** (`assets/demo/`, con el rótulo «Animación ilustrativa · no es una grabación real» quemado en el vídeo); la insignia sigue en «Pendiente» hasta que haya vídeo real del cambio Pi → HP. En la pantalla solo salen capturas reales de Control-deck (`assets/screenshots/`); el escritorio del HP es una pantalla neutra con texto porque no hay captura real.
+[![Website](https://img.shields.io/badge/Website-Online-16A34A?style=flat-square)](https://ardu01.github.io/orbit-web/)
+![HTML5](https://img.shields.io/badge/HTML5-Web-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-Design-1572B6?style=flat-square&logo=css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-Web-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![Blender](https://img.shields.io/badge/3D-Blender-E87D0D?style=flat-square&logo=blender&logoColor=white)
+![GitHub Pages](https://img.shields.io/badge/Hosting-GitHub_Pages-222222?style=flat-square&logo=github)
+![License](https://img.shields.io/badge/License-Apache--2.0-2563EB?style=flat-square)
 
-## Créditos
+---
 
-**Geometría de la animación**
-- Base, carcasa, bisel, pletinas, soporte del disco, bandeja de placas, placa de conectores, botón, tapa de la Pi, guías de luz, anillos y pomos: CAD OpenSCAD de [Sopa-IA/Control-deck](https://github.com/Sopa-IA/Control-deck) (rama `cursor/bandeja-v2-modular-6d15`, commit `ff97bb5`). Apache-2.0. Diseño provisional.
-- Monitor MSI PRO MP161 E2U: envolvente del CAD del repo con las cotas publicadas por MSI (sin logo, botones ni puertos).
-- Raspberry Pi 4 Model B: [Innerscene 3D Parts Library](https://www.innerscene.com/tools/library/3d-parts/raspberry-pi-4-model-b-layout-821bd96d). CC0 1.0.
-- Arduino Nano ×2: disposición de la placa oficial Arduino Nano V3.3 (`NanoV3.3.brd`, [archivos CAD A000005](https://docs.arduino.cc/hardware/nano/)), © Arduino, CC BY-SA 4.0. Componentes con los modelos 3D de [KiCad packages3D](https://gitlab.com/kicad/libraries/kicad-packages3D), CC-BY-SA 4.0 con la excepción de KiCad.
-- Disco duro de 3,5": envolvente, taladros y posición del conector según las especificaciones SFF-8301 y SFF-8323 (SNIA). Tapa (relieve, etiqueta, tornillos) medida de una foto del prototipo, que no se publica; etiqueta sin texto legible.
-- Placa base del HP: PCB mini-ITX de 170 × 170 mm con sus taladros estándar (posiciones del CAD). RAM (2 × Kingston HyperX blu, 133,35 × 30 mm), disipador con ventilador de 50 mm, puertos traseros y conectores blancos medidos de una foto cenital del prototipo (que no se publica); algunas alturas son estimadas. VGA y HDMI con los modelos de KiCad packages3D. Se omiten los componentes pequeños, el logo y los cables.
-- Imagen en pantalla: captura de Orbit OS del repo Control-deck.
+## Descripción
 
-Se han dejado fuera las piezas comerciales sin modelo 3D fiel: ESP8266, step-down, OLED, HAT VHF, pulsadores, tira LED, patas y cables.
+**Orbit Terminal Web** es la página oficial de presentación y documentación visual de **Orbit Terminal**, un proyecto experimental que combina informática, electrónica, fabricación digital y desarrollo de software.
 
-**Imágenes**
-- `assets/img/01_msi_frontal_3-4.webp`: render del diseño CAD de Control-deck (Apache-2.0).
-- `assets/img/os_*.webp`: recortes de capturas de Orbit OS de Control-deck (Apache-2.0).
-- `assets/fotos/`: fotos reales del prototipo en construcción, © 2026 Miguel Rodríguez Saiz. Todos los derechos reservados; no están cubiertas por la licencia Apache-2.0 ni por CC BY-SA.
-- `assets/montaje/`: renders propios con Blender a partir de la geometría anterior. Como muestran la placa Arduino Nano (CC BY-SA 4.0), estos renders se ofrecen también bajo CC BY-SA 4.0.
+Su objetivo es mostrar el diseño, los componentes y la evolución de una consola informática portátil de tipo *cyberdeck*, concebida como plataforma de experimentación y banco de pruebas tecnológico.
 
-**Herramientas**: OpenSCAD, Blender (Cycles, Freestyle), gmsh, Pillow.
+Orbit Terminal integra un ordenador HP, una Raspberry Pi 4 y componentes electrónicos dentro de una carcasa personalizada diseñada mediante CAD y concebida para fabricación mediante impresión 3D.
+
+La web documenta las diferentes etapas del proyecto mediante fotografías reales, renders tridimensionales y animaciones de montaje.
+
+**Desarrollador:** Miguel Rodríguez Saiz  
+**Organización:** Ardu Solutions  
+**Categoría:** Desarrollo Web / Hardware / Electrónica / Diseño CAD  
+**Proyecto principal:** Orbit Terminal  
+**Publicación:** GitHub Pages
+
+## Acceder a la web
+
+**[Visitar la web oficial de Orbit Terminal](https://ardu01.github.io/orbit-web/)**
+
+## Características
+
+- Presentación oficial de Orbit Terminal.
+- Información sobre el hardware y sus componentes.
+- Documentación visual de la construcción.
+- Fotografías reales del prototipo.
+- Línea de tiempo de evolución del proyecto.
+- Animaciones tridimensionales de montaje.
+- Visualizaciones creadas mediante Blender.
+- Información sobre diseño CAD e impresión 3D.
+- Presentación del entorno Orbit OS.
+- Capturas de la interfaz del sistema.
+- Indicadores del estado de desarrollo.
+- Diseño web adaptable.
+- Publicación mediante GitHub Pages.
+
+## Tecnologías
+
+| Tecnología | Función |
+|---|---|
+| HTML5 | Estructura y contenido |
+| CSS3 | Diseño visual |
+| JavaScript | Interactividad y animaciones |
+| Blender | Renderizado y animación 3D |
+| OpenSCAD | Modelado CAD del proyecto |
+| WebP | Imágenes optimizadas |
+| GitHub Pages | Alojamiento y publicación |
+| Git | Control de versiones |
+
+La web funciona como un sitio estático sin frameworks ni dependencias externas de ejecución.
+
+## Proyecto principal: Orbit Terminal
+
+Orbit Terminal es una consola informática experimental que combina diferentes plataformas de hardware dentro de una estructura personalizada.
+
+### Componentes principales
+
+| Componente | Función |
+|---|---|
+| Ordenador HP | Plataforma informática principal |
+| Raspberry Pi 4 | Ejecución de Orbit OS y funciones de control |
+| Pantalla MSI PRO MP161 E2U | Visualización de 15,6 pulgadas |
+| Carcasa personalizada | Estructura del dispositivo |
+| Componentes electrónicos | Integración y experimentación |
+| Almacenamiento interno | Soporte de datos |
+| Orbit OS | Entorno de software del proyecto |
+
+### Diseño CAD
+
+El proyecto incluye el desarrollo de piezas mecánicas personalizadas mediante OpenSCAD.
+
+Entre los componentes diseñados se encuentran:
+
+- Base y carcasa.
+- Bisel de pantalla.
+- Soportes internos.
+- Bandejas de componentes.
+- Soportes de almacenamiento.
+- Placas de conectores.
+- Elementos de fijación.
+- Controles y piezas auxiliares.
+
+Las dimensiones y determinadas características de diseño se encuentran sujetas a revisión, por lo que la documentación distingue entre datos confirmados y medidas provisionales.
+
+## Documentación visual
+
+### Evolución del prototipo
+
+La web incorpora una sección dedicada a mostrar las distintas etapas de desarrollo mediante fotografías reales.
+
+Esta línea de tiempo permite observar el progreso del hardware y los cambios realizados durante la construcción.
+
+### Animaciones 3D
+
+El sitio incluye animaciones de montaje renderizadas con Blender a partir de geometría CAD del proyecto.
+
+Se ofrecen representaciones visuales de diferentes estilos para ilustrar la disposición y ensamblaje de los componentes.
+
+**Las animaciones 3D son representaciones ilustrativas y no deben confundirse con grabaciones reales del montaje.**
+
+### Orbit OS
+
+La página también presenta el entorno de software desarrollado para Orbit Terminal.
+
+Las capturas publicadas corresponden a recursos reales del proyecto Control-deck.
+
+La demostración animada del cambio entre sistemas se identifica como ilustrativa hasta disponer de una grabación real.
+
+## Estructura del repositorio
+
+Entre sus componentes principales se encuentran:
+
+| Archivo o directorio | Función |
+|---|---|
+| `index.html` | Página principal |
+| `montaje.js` | Interactividad de montaje |
+| `assets/img/` | Imágenes y renders |
+| `assets/fotos/` | Fotografías reales |
+| `assets/montaje/` | Secuencias y renders 3D |
+| `assets/demo/` | Animaciones ilustrativas |
+| `assets/screenshots/` | Capturas del software |
+| `README.md` | Documentación principal |
+| `LICENSE` | Licencia Apache 2.0 |
+| `NOTICE` | Créditos y atribuciones |
+
+## Ejecución local
+
+Clonar el repositorio:
+
+```bash id="k9a1mz"
+git clone https://github.com/ardu01/orbit-web.git
+cd orbit-web
+```
+
+Iniciar un servidor HTTP local:
+
+```bash id="vw92bx"
+python3 -m http.server 8000
+```
+
+Acceder desde el navegador a:
+
+`http://localhost:8000`
+
+La web no requiere instalar dependencias adicionales para visualizar su contenido estático.
+
+## Estado del proyecto
+
+Orbit Terminal es un proyecto experimental que dispone de prototipos, documentación de construcción y desarrollo de software asociado.
+
+La web diferencia los estados de sus elementos mediante las categorías:
+
+- **Terminado:** elemento documentado como completado.
+- **En pruebas:** componente en evaluación.
+- **Pendiente:** elemento todavía no completado o sin verificar.
+
+Algunas características permanecen pendientes de medición o confirmación.
+
+Los datos técnicos definitivos deben consultarse en la documentación del proyecto principal.
+
+## Proyecto de hardware y software
+
+El desarrollo técnico de Orbit Terminal se encuentra en:
+
+**[Control-deck — GitHub](https://github.com/Sopa-IA/Control-deck)**
+
+Este repositorio web se dedica exclusivamente a la presentación, documentación visual y seguimiento del proyecto.
+
+El diseño CAD, las configuraciones de hardware y el software asociado se mantienen en el repositorio principal.
+
+## Autor
+
+**Miguel Rodríguez Saiz**
+
+Diseño, desarrollo y documentación del proyecto.
+
+**Ardu Solutions** — Desarrollo de software, electrónica, sistemas, inteligencia artificial y soluciones tecnológicas.
+
+- **Web oficial:** https://ardu01.github.io/orbit-web/
+- **Proyecto principal:** https://github.com/Sopa-IA/Control-deck
+- **Portfolio:** https://ardu01.github.io/proyectos/
+- **Ardu Solutions:** https://ardusolutions.pages.dev/
+- **GitHub:** https://github.com/ardu01
 
 ## Licencia
 
-Apache-2.0 © 2026 Miguel Rodríguez Saiz. Ver [LICENSE](LICENSE) y [NOTICE](NOTICE).
+El código y los contenidos cubiertos por la licencia principal del repositorio se distribuyen bajo **Apache License 2.0**.
+
+Los modelos y recursos de terceros conservan sus respectivas licencias, incluyendo determinados componentes bajo CC0 y CC BY-SA 4.0.
+
+Las fotografías reales del prototipo son propiedad de **Miguel Rodríguez Saiz** y no se distribuyen bajo Apache 2.0.
+
+Los renders que incorporan geometría sujeta a CC BY-SA 4.0 mantienen las condiciones de atribución y distribución correspondientes.
+
+Consultar [LICENSE](LICENSE) y [NOTICE](NOTICE) para más información.
+
+---
+
+**© 2026 Miguel Rodríguez Saiz · Ardu Solutions**
+
+*Orbit Terminal — Hardware, software and engineering in one platform.*
